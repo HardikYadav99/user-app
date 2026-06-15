@@ -1,11 +1,32 @@
-const http = require('http');
+const http = require("http");
+
+const PORT = process.env.PORT || 3000;
+
 const server = http.createServer((req, res) => {
-    res.writeHead(200, {'Content-Type': 'text/plain' });
-    res.end('User App is Deployed with updated backend \n');
+
+    console.log("Incoming request:", req.url);
+
+    if (req.url === "/health") {
+
+        res.writeHead(200, {
+            "Content-Type": "application/json"
+        });
+
+        return res.end(JSON.stringify({
+            status: "healthy"
+        }));
+    }
+
+    res.writeHead(200, {
+        "Content-Type": "application/json"
+    });
+
+    res.end(JSON.stringify({
+        message: "DevPortal backend deployment working",
+        path: req.url
+    }));
 });
 
-server.listen(3000, () => {
-  console.log('Server running on port 3000');
+server.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });
-
-// test comment to run pipeline    test test
