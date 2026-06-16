@@ -22,7 +22,7 @@ const server = http.createServer((req, res) => {
     });
 
     res.end(JSON.stringify({
-        message: "DevPortal backend deployment working",
+        message: "DevPortal backend deployment working v2",
         path: req.url
     }));
 });
