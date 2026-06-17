@@ -22,7 +22,7 @@ const server = http.createServer((req, res) => {
     });
 
     res.end(JSON.stringify({
-        message: "DevPortal is working with the updated folder workflow",
+        message: "DevPortal is working with the updated folder workflow and argocd syncing",
         path: req.url
     }));
 });
