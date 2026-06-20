@@ -22,7 +22,7 @@ const server = http.createServer((req, res) => {
     });
 
     res.end(JSON.stringify({
-        message: "DevPortal is working with the updated folder workflow and argocd syncing",
+        message: "V2.1 is Done Octane for the work hoooohaaa",
         path: req.url
     }));
 });
