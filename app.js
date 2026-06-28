@@ -22,7 +22,7 @@ const server = http.createServer((req, res) => {
     });
 
     res.end(JSON.stringify({
-        message: "V2.1 is Done Octane for the work hoooohaaa",
+        message: "V2.2 Namespace sepration successful. Jai Bhole",
         path: req.url
     }));
 });
